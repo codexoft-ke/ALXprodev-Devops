@@ -18,8 +18,10 @@ for file in "$DATA_DIR"/*.json; do
     printf "%s,%s,%s\n" "$name" "$height_m" "$weight_kg" >> "$REPORT_FILE"
 done
 
+
 # Print CSV report location
-printf "CSV Report generated at: %s\n\n" "$REPORT_FILE"
+echo "CSV Report generated at: $REPORT_FILE"
+echo
 cat "$REPORT_FILE"
 
 # Calculate averages using awk (skip header)
